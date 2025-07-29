@@ -1,0 +1,156 @@
+<div class="container py-5">
+  <div class="row">
+    <!-- Main Content -->
+    <div class="col-lg-8 mb-4 mb-lg-0">
+      <h2 class="mb-4">Artikel Terbaru</h2>
+      <div class="row g-4">
+        <div class="col-12 mb-4">
+          <div class="input-group">
+            <select
+              class="form-select"
+              [(ngModel)]="searchFilter"
+              style="max-width: 140px"
+            >
+              <option value="all">Semua</option>
+              <option value="title">Judul</option>
+              <option value="author">Penulis</option>
+              <option value="category">Kategori</option>
+            </select>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Cari blog..."
+              [(ngModel)]="searchTerm"
+            />
+          </div>
+        </div>
+        <ng-container *ngFor="let blog of pagedBlogs">
+          <div class="col-md-12">
+            <a
+              [routerLink]="[blog.link]"
+              class="card shadow-sm h-100 text-decoration-none text-dark blog-card"
+            >
+              <img
+                [src]="blog.img"
+                class="card-img-top"
+                [alt]="blog.title"
+                style="max-height: 180px; width: 100%; object-fit: cover"
+              />
+              <div class="card-body">
+                <h5 class="fw-bold mb-2">{{ blog.title }}</h5>
+                <div class="text-secondary mb-2">
+                  <i class="fas fa-user me-1"></i> {{ blog.author }} &bull;
+                  <i class="fas fa-calendar-alt me-1"></i>
+                  {{ blog.date | date : "dd MMM yyyy" }}
+                </div>
+                <p class="mb-3">{{ blog.summary }}</p>
+              </div>
+            </a>
+          </div>
+        </ng-container>
+        <div class="col-12 mt-4 d-flex justify-content-center">
+          <nav>
+            <ul class="pagination">
+              <li class="page-item" [class.disabled]="currentPage === 1">
+                <button class="page-link" (click)="prevPage()">&laquo;</button>
+              </li>
+              <li
+                class="page-item"
+                *ngFor="let page of totalPagesArr"
+                [class.active]="page === currentPage"
+              >
+                <button class="page-link" (click)="goToPage(page)">
+                  {{ page }}
+                </button>
+              </li>
+              <li
+                class="page-item"
+                [class.disabled]="currentPage === totalPages"
+              >
+                <button class="page-link" (click)="nextPage()">&raquo;</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="fw-bold mb-3">Kategori</h5>
+          <ul class="list-unstyled mb-3">
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none"
+                >Kategori Pajak</a
+              >
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none"
+                >Akuntansi</a
+              >
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none">UMKM</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none"
+                >Startup</a
+              >
+            </li>
+          </ul>
+          <h6 class="fw-bold mb-2">Penulis Populer</h6>
+          <ul class="list-unstyled">
+            <li class="mb-1">
+              <a href="#" class="text-secondary text-decoration-none"
+                >Eko Nugroho</a
+              >
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-secondary text-decoration-none"
+                >Dewi Anggraini</a
+              >
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-secondary text-decoration-none"
+                >Budi Santoso</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mb-4">
+        <div class="card-header">
+          <h5>Artikel Terpopuler</h5>
+        </div>
+        <div class="card-body">
+          <ng-container *ngFor="let blog of pagedBlogs">
+            <div class="col-md-12 mb-4">
+              <a
+                [routerLink]="[blog.link]"
+                class="card shadow-sm h-100 text-decoration-none text-dark blog-card"
+              >
+                <img
+                  [src]="blog.img"
+                  class="card-img-top"
+                  [alt]="blog.title"
+                  style="max-height: 180px; width: 100%; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="fw-bold mb-2">{{ blog.title }}</h5>
+                  <div class="text-secondary mb-2">
+                    <i class="fas fa-user me-1"></i> {{ blog.author }} &bull;
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    {{ blog.date | date : "dd MMM yyyy" }}
+                  </div>
+                  <p class="mb-3">{{ blog.summary }}</p>
+                </div>
+              </a>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

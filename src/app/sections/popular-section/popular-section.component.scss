@@ -1,0 +1,29 @@
+/* Style khusus untuk popular course section */
+#popular-section .card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+#popular-section .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+/* Updated badge styles for the new component name */
+#new-component-name .badge {
+  font-size: 0.95rem;
+  padding: 0.5em 1.2em;
+}
+.btn-gradient {
+  background: linear-gradient(90deg, #1976d2 0%, #43a047 100%);
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.12);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #1565c0 0%, #388e3c 100%);
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.18);
+}

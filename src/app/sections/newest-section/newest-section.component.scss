@@ -1,0 +1,15 @@
+/* Style khusus untuk popular course section */
+#popular-section .card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+#popular-section .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+/* Updated badge styles for the new component name */
+#new-component-name .badge {
+  font-size: 0.95rem;
+  padding: 0.5em 1.2em;
+}
