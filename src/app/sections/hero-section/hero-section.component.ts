@@ -19,9 +19,9 @@ export class HeroSectionComponent {
 
   handleSearch() {
     if (this.searchValue && this.searchValue.trim()) {
-      this.router.navigate(['/articles'], { queryParams: { search: this.searchValue } });
+      this.router.navigate(['/courses'], { queryParams: { search: this.searchValue } });
     } else {
-      this.router.navigate(['/articles']);
+      this.router.navigate(['/courses']);
     }
   }
 }

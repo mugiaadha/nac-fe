@@ -13,6 +13,8 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'articles', component: ArticlesComponent },
+  { path: 'login', loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent) },
+  { path: 'daftar', loadComponent: () => import('./pages/daftar/daftar.component').then(m => m.DaftarComponent) },
   { path: 'services', component: ServicesComponent },
   { path: 'services/compliance', component: ComplianceComponent },
   { path: 'services/konsultasi', component: KonsultasiComponent },

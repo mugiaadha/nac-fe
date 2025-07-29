@@ -2,7 +2,6 @@
   <div class="row">
     <!-- Main Content -->
     <div class="col-lg-8 mb-4 mb-lg-0">
-      <h2 class="mb-4">Artikel Terbaru</h2>
       <div class="row g-4">
         <!-- Search box removed from main content -->
         <ng-container *ngFor="let blog of pagedBlogs">
@@ -127,11 +126,6 @@
                 [routerLink]="[blog.link]"
                 class="card shadow-sm h-100 text-decoration-none text-dark blog-card"
               >
-                <img
-                  [src]="blog.img"
-                  class="card-img-top articles-img"
-                  [alt]="blog.title"
-                />
                 <div class="card-body">
                   <h5 class="fw-bold mb-2">{{ blog.title }}</h5>
                   <div class="text-secondary mb-2">

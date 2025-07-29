@@ -1,9 +1,89 @@
+.courses-searchbar-card {
+  position: relative;
+  border-radius: 2.5rem;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 4px 32px rgba(25, 118, 210, 0.10);
+  display: flex;
+  align-items: center;
+}
+.courses-searchbar {
+  height: 56px;
+  font-size: 1.25rem;
+  border-radius: 2.5rem;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  flex: 1;
+}
+.courses-searchbar:focus {
+  outline: none;
+  box-shadow: none;
+}
+.courses-searchbar-btn {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #1976d2;
+  font-size: 1.7rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s;
+}
+.courses-searchbar-btn:hover {
+  color: #43a047;
+}
+// Hero search bar section
+.courses-search-hero {
+  background: #e3eafc url("/images/newsletter/bgg.png") center/cover no-repeat;
+  border-radius: 0 0 24px 24px;
+  position: relative;
+}
+.courses-searchbar-wrapper {
+  position: relative;
+}
+.courses-searchbar {
+  height: 56px;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+  padding-left: 2.8rem;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.07);
+  border: 1px solid #bdbdbd;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.courses-searchbar:focus {
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.15);
+  border-color: #1976d2;
+}
+.courses-searchbar-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #adb5bd;
+  font-size: 1.3rem;
+  pointer-events: none;
+}
+// Migrasi style inline dari HTML ke CSS
+.courses-badge {
+  top: 16px;
+  right: 16px;
+}
+.courses-rating {
+  color: #f7b500;
+  font-weight: 600;
+}
+.courses-stars {
+  color: #f7b500;
+}
 /* Container and Header */
 .courses-header {
   background: #f5f7fa;
   padding: 32px 24px 16px 24px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   margin-bottom: 32px;
   text-align: center;
 }
@@ -26,7 +106,8 @@
   width: 320px;
   font-size: 1rem;
 }
-.filter-btn, .reset-btn {
+.filter-btn,
+.reset-btn {
   background: #1976d2;
   color: #fff;
   border: none;
@@ -36,7 +117,8 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-.filter-btn:hover, .reset-btn:hover {
+.filter-btn:hover,
+.reset-btn:hover {
   background: #1565c0;
 }
 .courses-header p {
@@ -55,7 +137,7 @@
 .course-card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   overflow: hidden;
   display: flex;
   flex-direction: column;
