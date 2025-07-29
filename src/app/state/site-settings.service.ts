@@ -1,18 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { SiteSettings } from '../models/site-settings.model';
 
-export interface SiteSettings {
-  title: string;
-  favicon: string;
-  logo?: string;
-  phone?: string;
-  email?: string;
-  address?: string;
-  facebook?: string;
-  twitter?: string;
-  copyright?: string;
-}
+const BASE_URL = 'http://202.10.41.215/api';
 
 @Injectable({ providedIn: 'root' })
 export class SiteSettingsService {
@@ -29,15 +20,13 @@ export class SiteSettingsService {
   }
 
   fetchSettings() {
-    this.http
-      .get<any>('http://202.10.41.215/api/site-settings')
-      .subscribe((res) => {
-        if (res.success && res.data) {
-          this.settingsSubject.next({
-            ...this.settingsSubject.value,
-            ...res.data,
-          });
-        }
-      });
+    this.http.get<any>(`${BASE_URL}/site-settings`).subscribe((res) => {
+      if (res.success && res.data) {
+        this.settingsSubject.next({
+          ...this.settingsSubject.value,
+          ...res.data,
+        });
+      }
+    });
   }
 }
