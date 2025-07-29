@@ -1,3 +1,12 @@
+// Migrasi style inline ke CSS
+.articles-img {
+  max-height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+.articles-select {
+  max-width: 140px;
+}
 .blog-card {
   transition: box-shadow 0.2s, transform 0.2s;
 }

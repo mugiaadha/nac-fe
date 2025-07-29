@@ -13,9 +13,8 @@
             >
               <img
                 [src]="blog.img"
-                class="card-img-top"
+                class="card-img-top articles-img"
                 [alt]="blog.title"
-                style="max-height: 180px; width: 100%; object-fit: cover"
               />
               <div class="card-body">
                 <h5 class="fw-bold mb-2">{{ blog.title }}</h5>
@@ -60,9 +59,8 @@
       <!-- Search box di luar card -->
       <div class="input-group mb-3">
         <select
-          class="form-select"
+          class="form-select articles-select"
           [(ngModel)]="searchFilter"
-          style="max-width: 140px"
         >
           <option value="all">Semua</option>
           <option value="title">Judul</option>
@@ -133,9 +131,8 @@
               >
                 <img
                   [src]="blog.img"
-                  class="card-img-top"
-                  [alt]="blog.title"
-                  style="max-height: 180px; width: 100%; object-fit: cover"
+                class="card-img-top articles-img"
+                [alt]="blog.title"
                 />
                 <div class="card-body">
                   <h5 class="fw-bold mb-2">{{ blog.title }}</h5>
