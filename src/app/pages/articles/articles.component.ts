@@ -1,6 +1,7 @@
 import { CommonModule, DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -72,6 +73,7 @@ export class ArticlesComponent {
       this.currentPage++;
     }
   }
+
   blogs = [
     {
       title: 'Tips Pajak UMKM di Era Digital',
@@ -101,4 +103,15 @@ export class ArticlesComponent {
       link: '/articles/akuntansi-startup',
     },
   ];
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      if (params['search']) {
+        this.searchTerm = params['search'];
+      }
+      if (params['filter']) {
+        this.searchFilter = params['filter'];
+      }
+    });
+  }
 }

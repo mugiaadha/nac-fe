@@ -4,7 +4,7 @@
     <div class="col-lg-8 mb-4 mb-lg-0">
       <h2 class="mb-4">Artikel Terbaru</h2>
       <div class="row g-4">
-            <!-- Search box removed from main content -->
+        <!-- Search box removed from main content -->
         <ng-container *ngFor="let blog of pagedBlogs">
           <div class="col-md-12">
             <a
@@ -57,22 +57,20 @@
     <!-- Sidebar -->
     <div class="col-lg-4">
       <!-- Search box di luar card -->
-      <div class="input-group mb-3">
-        <select
-          class="form-select articles-select"
-          [(ngModel)]="searchFilter"
-        >
-          <option value="all">Semua</option>
-          <option value="title">Judul</option>
-          <option value="author">Penulis</option>
-          <option value="category">Kategori</option>
-        </select>
-        <input
-          type="text"
-          class="form-control form-control-lg"
-          placeholder="Cari blog..."
-          [(ngModel)]="searchTerm"
-        />
+      <div class="articles-searchbox mb-3">
+        <div class="d-flex gap-2">
+          <div class="articles-search-input-wrapper position-relative flex-grow-1">
+            <input
+              type="text"
+              class="form-control articles-search-input"
+              placeholder="Cari artikel..."
+              [(ngModel)]="searchTerm"
+            />
+            <span class="articles-search-icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </div>
       </div>
       <div class="card shadow-sm mb-4">
         <div class="card-body">
@@ -131,8 +129,8 @@
               >
                 <img
                   [src]="blog.img"
-                class="card-img-top articles-img"
-                [alt]="blog.title"
+                  class="card-img-top articles-img"
+                  [alt]="blog.title"
                 />
                 <div class="card-body">
                   <h5 class="fw-bold mb-2">{{ blog.title }}</h5>
