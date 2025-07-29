@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -37,9 +37,6 @@ jobs:
           ARGS: -avz --delete
           SCRIPT_AFTER: |
             cd /var/www/angular-app
-            # Set proper permissions
             sudo chown -R www-data:www-data /var/www/angular-app
             sudo chmod -R 755 /var/www/angular-app
-            # Restart web server (nginx/apache/systemd) jika perlu
             sudo systemctl reload nginx
-            sudo systemctl reload apache2
