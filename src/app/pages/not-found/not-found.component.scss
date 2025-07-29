@@ -10,7 +10,21 @@
 .not-found-img {
   width: 220px;
   margin-bottom: 24px;
+  animation: float404 2.2s ease-in-out infinite;
 }
+
+@keyframes float404 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 h1 {
   font-size: 4rem;
   color: #1976d2;
