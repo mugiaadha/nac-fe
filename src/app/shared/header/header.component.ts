@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MENUS } from '../menu.config';
+import { MENUS } from '../../config/menu.config';
 import { SiteSettingsService } from '../../state/site-settings.service';
 import { LogoComponent } from '../../shared/logo.component';
 import { AsyncPipe, NgFor, CommonModule } from '@angular/common';

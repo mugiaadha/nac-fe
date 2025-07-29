@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-konsultasi',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './konsultasi.component.html',
   styleUrls: ['./konsultasi.component.scss'],
-  standalone: true,
 })
-export class KonsultasiComponent {
-  // Tambahkan logic jika diperlukan
-}
+export class KonsultasiComponent {}

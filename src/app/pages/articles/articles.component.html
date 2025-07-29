@@ -4,26 +4,7 @@
     <div class="col-lg-8 mb-4 mb-lg-0">
       <h2 class="mb-4">Artikel Terbaru</h2>
       <div class="row g-4">
-        <div class="col-12 mb-4">
-          <div class="input-group">
-            <select
-              class="form-select"
-              [(ngModel)]="searchFilter"
-              style="max-width: 140px"
-            >
-              <option value="all">Semua</option>
-              <option value="title">Judul</option>
-              <option value="author">Penulis</option>
-              <option value="category">Kategori</option>
-            </select>
-            <input
-              type="text"
-              class="form-control form-control-lg"
-              placeholder="Cari blog..."
-              [(ngModel)]="searchTerm"
-            />
-          </div>
-        </div>
+            <!-- Search box removed from main content -->
         <ng-container *ngFor="let blog of pagedBlogs">
           <div class="col-md-12">
             <a
@@ -76,6 +57,25 @@
     </div>
     <!-- Sidebar -->
     <div class="col-lg-4">
+      <!-- Search box di luar card -->
+      <div class="input-group mb-3">
+        <select
+          class="form-select"
+          [(ngModel)]="searchFilter"
+          style="max-width: 140px"
+        >
+          <option value="all">Semua</option>
+          <option value="title">Judul</option>
+          <option value="author">Penulis</option>
+          <option value="category">Kategori</option>
+        </select>
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          placeholder="Cari blog..."
+          [(ngModel)]="searchTerm"
+        />
+      </div>
       <div class="card shadow-sm mb-4">
         <div class="card-body">
           <h5 class="fw-bold mb-3">Kategori</h5>

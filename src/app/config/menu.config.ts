@@ -1,9 +1,9 @@
 export const MENUS = [
-  { label: 'Home', link: '/' },
-  { label: 'Courses', link: '/courses' },
-  { label: 'Articles', link: '/articles' },
+  { label: 'Beranda', link: '/' },
+  { label: 'Pelatihan', link: '/courses' },
+  { label: 'Artikel', link: '/articles' },
   {
-    label: 'Services',
+    label: 'Layanan',
     children: [
       { label: 'Compliance', link: '/services/compliance' },
       { label: 'Konsultasi', link: '/services/konsultasi' },

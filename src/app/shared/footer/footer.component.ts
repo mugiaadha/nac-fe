@@ -3,7 +3,7 @@ import { LogoComponent } from '../logo.component';
 import { SiteSettingsService } from '../../state/site-settings.service';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { MENUS } from '../menu.config';
+import { MENUS } from '../../config/menu.config';
 
 @Component({
   selector: 'app-footer',
