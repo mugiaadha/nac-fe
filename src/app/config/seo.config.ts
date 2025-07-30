@@ -18,11 +18,11 @@ export const SEO_CONFIG = {
       'Buat akun baru di NAC Tax Center dan nikmati kemudahan layanan pajak.',
     keywords: 'daftar, NAC Tax Center, registrasi, layanan pajak',
   },
-  faq: {
-    title: 'FAQ - NAC Tax Center',
+  pusatBantuan: {
+    title: 'Pusat Bantuan - NAC Tax Center',
     description:
-      'Pertanyaan yang sering diajukan tentang layanan pajak di NAC Tax Center.',
-    keywords: 'faq, pertanyaan, NAC Tax Center, layanan pajak',
+      'Temukan jawaban atas pertanyaan Anda tentang layanan pajak di NAC Tax Center.',
+    keywords: 'pusat bantuan, pertanyaan, NAC Tax Center, layanan pajak',
   },
   courses: {
     title: 'Kursus Pajak - NAC Tax Center',

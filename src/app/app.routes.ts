@@ -3,9 +3,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DaftarComponent } from './pages/daftar/daftar.component';
-import { FaqComponent } from './pages/faq/faq.component';
 import { SeoResolver } from './resolvers/seo.resolver';
 import { SEO_CONFIG } from './config/seo.config';
+import { PusatBantuanComponent } from './pages/pusat-bantuan/pusat-bantuan.component';
 
 export const routes: Routes = [
   {
@@ -33,10 +33,10 @@ export const routes: Routes = [
     data: { seo: SEO_CONFIG.daftar },
   },
   {
-    path: 'faq',
-    component: FaqComponent,
+    path: 'pusat-bantuan',
+    component: PusatBantuanComponent,
     resolve: { seo: SeoResolver },
-    data: { seo: SEO_CONFIG.faq },
+    data: { seo: SEO_CONFIG.pusatBantuan },
   },
   {
     path: 'courses',

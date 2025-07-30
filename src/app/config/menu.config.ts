@@ -10,5 +10,5 @@ export const MENUS = [
       { label: 'Case', link: '/services/case' },
     ],
   },
-  { label: 'FAQ', link: '/faq' },
+  { label: 'Pusat Bantuan', link: '/pusat-bantuan' },
 ];
