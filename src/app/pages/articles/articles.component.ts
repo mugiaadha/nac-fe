@@ -81,7 +81,7 @@ export class ArticlesComponent {
       date: '2025-07-20',
       summary:
         'Bagaimana UMKM bisa memanfaatkan teknologi untuk pelaporan pajak yang lebih mudah dan efisien.',
-      img: './images/courses/courseone.png',
+      img: './images/courses/courseone.webp',
       link: '/articles/tips-pajak-umkm',
     },
     {
@@ -90,7 +90,7 @@ export class ArticlesComponent {
       date: '2025-07-15',
       summary:
         'Ringkasan perubahan regulasi pajak terbaru dan dampaknya bagi pelaku usaha.',
-      img: './images/courses/coursetwo.png',
+      img: './images/courses/coursetwo.webp',
       link: '/articles/regulasi-2025',
     },
     {
@@ -99,7 +99,7 @@ export class ArticlesComponent {
       date: '2025-07-10',
       summary:
         'Strategi akuntansi yang tepat untuk startup agar tetap comply dan efisien.',
-      img: './images/courses/coursethree.png',
+      img: './images/courses/coursethree.webp',
       link: '/articles/akuntansi-startup',
     },
   ];

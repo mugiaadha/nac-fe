@@ -43,20 +43,20 @@ export class CourseDetailComponent {
       comment: 'Materinya sangat jelas dan mudah dipahami, cocok untuk pemula!',
     },
     {
-      img: './images/testimonial/userone.png',
+      img: './images/testimonial/userone.webp',
       name: 'Dewi Anggraini',
       rating: 4.8,
       comment: 'Sangat membantu untuk memahami pajak UMKM, recommended!',
     },
     {
-      img: './images/testimonial/usertwo.png',
+      img: './images/testimonial/usertwo.webp',
       name: 'Rina Sari',
       rating: 4.9,
       comment:
         'Instruktur ramah dan penjelasan detail, saya jadi lebih paham pajak!',
     },
     {
-      img: './images/testimonial/userthree.png',
+      img: './images/testimonial/userthree.webp',
       name: 'Andi Wijaya',
       rating: 4.7,
       comment: 'Materi lanjutan sangat bermanfaat untuk freelancer.',
@@ -69,7 +69,7 @@ export class CourseDetailComponent {
     },
   ];
   showAllReviews = false;
-  
+
   get displayedReviews() {
     return this.showAllReviews ? this.reviews : this.reviews.slice(0, 3);
   }
