@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ComplianceComponent } from './compliance/compliance.component';
 import { CaseComponent } from './case/case.component';
 import { KonsultasiComponent } from './konsultasi/konsultasi.component';
-import { SeoResolver } from '../../resolvers/seo.resolver';
 
 const routes: Routes = [
   {
