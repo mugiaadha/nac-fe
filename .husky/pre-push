@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run build
+if [ $? -ne 0 ]; then
+  echo "Build gagal, push dibatalkan."
+  exit 1
+fi
