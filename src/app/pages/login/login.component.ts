@@ -18,7 +18,7 @@ export class LoginComponent {
 
   constructor(public siteSettings: SiteSettingsService) {
     this.siteSettings.settings$.subscribe((settings) => {
-      this.logoUrl = settings.logo || './logo-login.svg';
+      this.logoUrl = settings.logo || '';
     });
   }
 }
