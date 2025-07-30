@@ -1,3 +1,16 @@
+// Background gradient mirip btn-gradient
+.bg-primary-gradient {
+  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
+  color: #fff;
+}
+// Gradient text mirip btn-gradient
+.text-primary-gradient {
+  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 /* Hover effect for course cards */
 .card-hover {
   transition: transform 0.18s cubic-bezier(0.4, 0.2, 0.2, 1),
@@ -213,7 +226,7 @@ body {
 
 // Global gradient button
 .btn-gradient {
-  background: linear-gradient(90deg, #1976d2 0%, #43a047 100%);
+  background: linear-gradient(90deg, #1976d2 0%, #6366f1 100%);
   color: #fff !important;
   border: none;
   box-shadow: 0 2px 12px rgba(25, 118, 210, 0.12);
@@ -223,7 +236,7 @@ body {
   transition: background 0.2s, box-shadow 0.2s;
 }
 .btn-gradient:hover {
-  background: linear-gradient(90deg, #1565c0 0%, #388e3c 100%);
+  background: linear-gradient(90deg, #1565c0 0%, #4142b3 100%);
   box-shadow: 0 4px 24px rgba(25, 118, 210, 0.18);
 }
 
