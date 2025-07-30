@@ -4,8 +4,8 @@
     <h2 class="fw-bold text-dark category-title">Kategori Pelatihan</h2>
   </div>
   <div class="row g-4">
-    <div class="col-6 col-md-2 p-1" *ngFor="let category of categories">
-      <a [routerLink]="['/courses', category.name]" class="category-link">
+    <div class="col-6 col-md-2 m-0 p-1" *ngFor="let category of visibleCategories">
+      <a [routerLink]="['/courses']" [queryParams]="{ search: category.name }" class="category-link">
         <div class="card shadow-sm border-0 h-100 category-card">
           <div class="card-img-container">
             <img
@@ -20,13 +20,23 @@
             </div>
             <div class="card-body-overlay">
               <div class="text-secondary mb-2">{{ category.description }}</div>
-              <span class="badge rounded-pill" [ngClass]="category.badgeClass">
-                {{ category.badge }}
+              <span class="category rounded-4 px-2 text-white" [ngClass]="category.categoryClass">
+                {{ category.category }}
               </span>
             </div>
           </div>
         </div>
       </a>
     </div>
+  </div>
+  <div class="d-flex justify-content-center mt-3" *ngIf="visibleCount < categories.length">
+    <button class="btn btn-outline-primary px-4" (click)="showMoreCategories()">
+      Lihat lebih banyak
+    </button>
+  </div>
+  <div class="d-flex justify-content-center mt-3" *ngIf="visibleCount >= categories.length && categories.length > 12">
+    <button class="btn btn-outline-secondary px-4" (click)="resetCategories()">
+      Tutup
+    </button>
   </div>
 </section>

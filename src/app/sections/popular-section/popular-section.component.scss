@@ -2,7 +2,7 @@
 .popular-title {
   font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
 }
-.popular-badge {
+.popular-category {
   top: 16px;
   right: 16px;
 }
@@ -23,8 +23,8 @@
   height: 180px;
   object-fit: cover;
 }
-/* Updated badge styles for the new component name */
-#new-component-name .badge {
+/* Updated category styles for the new component name */
+#new-component-name .category {
   font-size: 0.95rem;
   padding: 0.5em 1.2em;
 }

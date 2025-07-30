@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterLink } from '@angular/router';
+import { ARTICLES } from '../../config/articles.config';
 
 @Component({
   selector: 'app-articles',
@@ -11,49 +12,54 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, RouterLink, DatePipe, FormsModule],
 })
 export class ArticlesComponent {
+  articles = ARTICLES;
+
+  uniqueCategories: string[] = Array.from(
+    new Set(this.articles.map((b) => b.category))
+  );
   searchTerm: string = '';
   searchFilter: string = 'all';
   currentPage: number = 1;
   pageSize: number = 5;
 
-  get filteredBlogs() {
-    if (!this.searchTerm) return this.blogs;
+  get filteredArticles() {
+    if (!this.searchTerm) return this.articles;
     const term = this.searchTerm.toLowerCase();
     switch (this.searchFilter) {
       case 'title':
-        return this.blogs.filter((blog) =>
-          blog.title.toLowerCase().includes(term)
+        return this.articles.filter((article) =>
+          article.title.toLowerCase().includes(term)
         );
       case 'author':
-        return this.blogs.filter((blog) =>
-          blog.author.toLowerCase().includes(term)
+        return this.articles.filter((article) =>
+          article.author.toLowerCase().includes(term)
         );
       case 'category':
-        // kategori dummy, bisa diubah jika ada field kategori di data blog
-        return this.blogs.filter((blog) =>
-          blog.summary.toLowerCase().includes(term)
+        // kategori dummy, bisa diubah jika ada field kategori di data article
+        return this.articles.filter((article) =>
+          article.summary.toLowerCase().includes(term)
         );
       default:
-        return this.blogs.filter(
-          (blog) =>
-            blog.title.toLowerCase().includes(term) ||
-            blog.author.toLowerCase().includes(term) ||
-            blog.summary.toLowerCase().includes(term)
+        return this.articles.filter(
+          (article) =>
+            article.title.toLowerCase().includes(term) ||
+            article.author.toLowerCase().includes(term) ||
+            article.summary.toLowerCase().includes(term)
         );
     }
   }
 
   get totalPages() {
-    return Math.ceil(this.filteredBlogs.length / this.pageSize) || 1;
+    return Math.ceil(this.filteredArticles.length / this.pageSize) || 1;
   }
 
   get totalPagesArr() {
     return Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
 
-  get pagedBlogs() {
+  get pagedArticles() {
     const start = (this.currentPage - 1) * this.pageSize;
-    return this.filteredBlogs.slice(start, start + this.pageSize);
+    return this.filteredArticles.slice(start, start + this.pageSize);
   }
 
   goToPage(page: number) {
@@ -74,38 +80,12 @@ export class ArticlesComponent {
     }
   }
 
-  blogs = [
-    {
-      title: 'Tips Pajak UMKM di Era Digital',
-      author: 'Eko Nugroho',
-      date: '2025-07-20',
-      summary:
-        'Bagaimana UMKM bisa memanfaatkan teknologi untuk pelaporan pajak yang lebih mudah dan efisien.',
-      img: './images/courses/courseone.webp',
-      link: '/articles/tips-pajak-umkm',
-    },
-    {
-      title: 'Perubahan Regulasi Pajak 2025',
-      author: 'Dewi Anggraini',
-      date: '2025-07-15',
-      summary:
-        'Ringkasan perubahan regulasi pajak terbaru dan dampaknya bagi pelaku usaha.',
-      img: './images/courses/coursetwo.webp',
-      link: '/articles/regulasi-2025',
-    },
-    {
-      title: 'Strategi Akuntansi untuk Startup',
-      author: 'Budi Santoso',
-      date: '2025-07-10',
-      summary:
-        'Strategi akuntansi yang tepat untuk startup agar tetap comply dan efisien.',
-      img: './images/courses/coursethree.webp',
-      link: '/articles/akuntansi-startup',
-    },
-  ];
-
   constructor(private route: ActivatedRoute) {
-    this.route.queryParams.subscribe(params => {
+    // Inisialisasi kategori unik dari articles
+    this.uniqueCategories = Array.from(
+      new Set(this.articles.map((b) => b.category))
+    );
+    this.route.queryParams.subscribe((params) => {
       if (params['search']) {
         this.searchTerm = params['search'];
       }
