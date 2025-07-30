@@ -1,7 +1,9 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CoursesComponent } from './pages/courses/courses.component';
+import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
+import { ArticleDetailComponent } from './pages/article-detail/article-detail.component';
 import { ServicesComponent } from './services/services.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ComplianceComponent } from './pages/compliance/compliance.component';
@@ -15,7 +17,9 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'courses', component: CoursesComponent },
+  { path: 'courses/:id', component: CourseDetailComponent },
   { path: 'articles', component: ArticlesComponent },
+  { path: 'articles/:id', component: ArticleDetailComponent },
   { path: 'login', component: LoginComponent },
   { path: 'daftar', component: DaftarComponent },
   { path: 'faq', component: FaqComponent },

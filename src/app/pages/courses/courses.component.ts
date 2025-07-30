@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { COURSES_DATA } from '../../config/courses.config';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -8,12 +8,13 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss'],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
 })
 export class CoursesComponent {
   visibleCount = 8;
   searchValue: string = '';
   allCourses = COURSES_DATA;
+
   constructor(private route: ActivatedRoute) {
     this.route.queryParams.subscribe((params) => {
       if (params['search']) {

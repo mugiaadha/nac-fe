@@ -1,5 +1,6 @@
 export const COURSES_DATA = [
   {
+    slug: 'tips-pajak-umkm-digital',
     title: 'Tips Pajak UMKM di Era Digital',
     author: 'Eko Nugroho',
     date: '2025-07-20',
@@ -14,6 +15,7 @@ export const COURSES_DATA = [
     participants: 1200,
   },
   {
+    slug: 'regulasi-pajak-2025',
     title: 'Perubahan Regulasi Pajak 2025',
     author: 'Dewi Anggraini',
     date: '2025-07-15',
@@ -28,6 +30,7 @@ export const COURSES_DATA = [
     participants: 950,
   },
   {
+    slug: 'akuntansi-startup',
     title: 'Strategi Akuntansi untuk Startup',
     author: 'Budi Santoso',
     date: '2025-07-10',
@@ -38,10 +41,11 @@ export const COURSES_DATA = [
     badge: 'Startup',
     rating: '4.9',
     price: 'Rp 200.000',
-    classes: 10,
+    classes: 7,
     participants: 800,
   },
   {
+    slug: 'kursus-pajak-pribadi',
     title: 'Kursus Pajak Pribadi',
     author: 'Rina Sari',
     date: '2025-07-05',
@@ -55,6 +59,7 @@ export const COURSES_DATA = [
     participants: 600,
   },
   {
+    slug: 'pajak-freelancer',
     title: 'Pajak untuk Freelancer',
     author: 'Andi Wijaya',
     date: '2025-06-28',
@@ -68,6 +73,7 @@ export const COURSES_DATA = [
     participants: 400,
   },
   {
+    slug: 'umkm-lanjutan',
     title: 'Pajak UMKM Lanjutan',
     author: 'Eko Nugroho',
     date: '2025-06-20',
@@ -81,6 +87,7 @@ export const COURSES_DATA = [
     participants: 700,
   },
   {
+    slug: 'pajak-internasional-pebisnis',
     title: 'Pajak Internasional untuk Pebisnis',
     author: 'Siti Rahma',
     date: '2025-06-10',
@@ -94,6 +101,7 @@ export const COURSES_DATA = [
     participants: 500,
   },
   {
+    slug: 'audit-pajak-modern',
     title: 'Audit Pajak Modern',
     author: 'Dian Pratama',
     date: '2025-05-30',
@@ -107,6 +115,7 @@ export const COURSES_DATA = [
     participants: 350,
   },
   {
+    slug: 'pajak-digital-economy',
     title: 'Pajak Digital Economy',
     author: 'Rudi Hartono',
     date: '2025-05-20',
@@ -120,6 +129,7 @@ export const COURSES_DATA = [
     participants: 420,
   },
   {
+    slug: 'manajemen-pajak-perusahaan',
     title: 'Manajemen Pajak Perusahaan',
     author: 'Linda Kusuma',
     date: '2025-05-10',
@@ -133,6 +143,7 @@ export const COURSES_DATA = [
     participants: 800,
   },
   {
+    slug: 'pajak-properti-real-estate',
     title: 'Pajak Properti & Real Estate',
     author: 'Tono Suprapto',
     date: '2025-04-30',
@@ -146,6 +157,7 @@ export const COURSES_DATA = [
     participants: 300,
   },
   {
+    slug: 'pajak-kendaraan-transportasi',
     title: 'Pajak Kendaraan & Transportasi',
     author: 'Yuni Astuti',
     date: '2025-04-20',
@@ -159,6 +171,7 @@ export const COURSES_DATA = [
     participants: 250,
   },
   {
+    slug: 'pajak-warisan-hibah',
     title: 'Pajak Warisan & Hibah',
     author: 'Agus Setiawan',
     date: '2025-04-10',
@@ -172,6 +185,7 @@ export const COURSES_DATA = [
     participants: 180,
   },
   {
+    slug: 'pajak-sektor-kreatif',
     title: 'Pajak Sektor Kreatif',
     author: 'Maya Putri',
     date: '2025-03-30',
@@ -185,6 +199,7 @@ export const COURSES_DATA = [
     participants: 320,
   },
   {
+    slug: 'umkm-pemula',
     title: 'Pajak UMKM Pemula',
     author: 'Eko Nugroho',
     date: '2025-03-20',
@@ -198,6 +213,7 @@ export const COURSES_DATA = [
     participants: 150,
   },
   {
+    slug: 'startup-lanjutan',
     title: 'Pajak Startup Lanjutan',
     author: 'Budi Santoso',
     date: '2025-03-10',
@@ -211,6 +227,7 @@ export const COURSES_DATA = [
     participants: 400,
   },
   {
+    slug: 'freelancer-lanjutan',
     title: 'Pajak Freelancer Lanjutan',
     author: 'Andi Wijaya',
     date: '2025-02-28',
@@ -224,6 +241,7 @@ export const COURSES_DATA = [
     participants: 220,
   },
   {
+    slug: 'pribadi-lanjutan',
     title: 'Pajak Pribadi Lanjutan',
     author: 'Rina Sari',
     date: '2025-02-20',
@@ -237,6 +255,7 @@ export const COURSES_DATA = [
     participants: 180,
   },
   {
+    slug: 'umkm-digital',
     title: 'Pajak UMKM Digital',
     author: 'Eko Nugroho',
     date: '2025-02-10',
@@ -250,6 +269,7 @@ export const COURSES_DATA = [
     participants: 200,
   },
   {
+    slug: 'startup-pemula',
     title: 'Pajak Startup Pemula',
     author: 'Budi Santoso',
     date: '2025-01-30',
@@ -263,6 +283,7 @@ export const COURSES_DATA = [
     participants: 120,
   },
   {
+    slug: 'freelancer-pemula',
     title: 'Pajak Freelancer Pemula',
     author: 'Andi Wijaya',
     date: '2025-01-20',
